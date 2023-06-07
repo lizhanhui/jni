@@ -1,0 +1,1 @@
+-Djava.library.path=/path/to/shared/lib
