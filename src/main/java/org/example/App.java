@@ -10,7 +10,7 @@ public class App
         System.loadLibrary("native");
     }
 
-    public static void main( String[] args )
+    public static void main( String[] args ) throws Exception
     {
         long total = 0;
         int count = 1000000;
@@ -21,6 +21,9 @@ public class App
             total += System.nanoTime() - start;
         }
         System.out.println("AVG: " + total / count + "ns");
+        while (true) {
+            Thread.sleep(1000);
+        }
     }
 
     public native void foo();
