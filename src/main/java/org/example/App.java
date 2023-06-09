@@ -19,7 +19,7 @@ public class App {
         App app = new App();
         System.out.println("Start to call native method");
 
-        Executors.newScheduledThreadPool(1).schedule(new Runnable() {
+        Executors.newScheduledThreadPool(1).scheduleAtFixedRate(new Runnable() {
             public void run() {
                 long t = total.getAndSet(0);
                 long c = count.getAndSet(0);
@@ -27,7 +27,7 @@ public class App {
                     System.out.println("AVG: " + (t / c) + "ns");
                 }
             }
-        }, 1, TimeUnit.SECONDS);
+        }, 1, 1, TimeUnit.SECONDS);
 
         while (true) {
             long start = System.nanoTime();
