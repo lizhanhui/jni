@@ -15,6 +15,8 @@ public class App
         long total = 0;
         int count = 1000000;
         App app = new App();
+        Thread.sleep(1000);
+        System.out.println("Start to call native method");
         for (int i = 0; i < count; i++) {
             long start = System.nanoTime();
             app.foo();

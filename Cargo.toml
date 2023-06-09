@@ -7,6 +7,7 @@ edition = "2021"
 
 [dependencies]
 jni = "0.21.1"
+libc = "0.2.146"
 
 [lib]
 crate_type = ["cdylib"]
