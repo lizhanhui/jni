@@ -36,7 +36,7 @@ pub extern "system" fn JNI_OnLoad(vm: JavaVM, _: *mut libc::c_void) -> jint {
                 // loop {}
                 tokio_uring::start(async move {
                     loop {
-                        tokio::time::sleep(std::time::Duration::from_micros(1)).await;
+                        tokio::time::sleep(std::time::Duration::from_nanos(1)).await;
                     }
                 })
             }

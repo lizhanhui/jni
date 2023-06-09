@@ -24,7 +24,7 @@ public class App {
                 long t = total.getAndSet(0);
                 long c = count.getAndSet(0);
                 if (c > 0) {
-                    System.out.println("AVG: " + (t / c) + "ns");
+                    System.out.println("AVG: " + (t / c) + "ns, runs: " + c);
                 }
             }
         }, 1, 1, TimeUnit.SECONDS);
